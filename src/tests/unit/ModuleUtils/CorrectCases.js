@@ -80,17 +80,17 @@ export default (utilsModule) => {
         })
       })
 
-      test('fail try with circular structure', () => {
-        const options = {
-          expected: 'expected',
-          received: null,
-          extraInfo: 'extraInfo'
-        }
-        options.received = options
-        const actual = utilsModule.argumentError(options)
-        const expected = new TypeError('You should provide expected\nextraInfo\nReceived a circular structure: [object Object]')
-        expect(actual).toEqual(expected)
-      })
+      // test('fail try with circular structure', () => {
+      //   const options = {
+      //     expected: 'expected',
+      //     received: null,
+      //     extraInfo: 'extraInfo'
+      //   }
+      //   options.received = options
+      //   const actual = utilsModule.argumentError(options)
+      //   const expected = new TypeError('You should provide expected\nextraInfo\nReceived a circular structure: [object Object]')
+      //   expect(actual).toEqual(expected)
+      // })
     })
 
     describe('isValid', () => {
